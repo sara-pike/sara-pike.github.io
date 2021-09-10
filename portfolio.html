@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<title>Sara Pike Creative</title>
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/layout.css">
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>a
+	<![endif]-->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.min.js"></script>
+	<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+	<script type="text/javascript" src="http://www.queness.com/js/bsa.js"></script>
+
+	<script type="text/javascript" src="js/panel.js"></script>
+
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="css/grid.css" type="text/css" media="screen">
+	<link rel="icon"
+          type="image/png"
+          href="images/favicon.png" />
+
+
+	<script type="text/javascript">
+	$(function () {
+
+		var filterList = {
+
+			init: function () {
+
+				// MixItUp plugin
+				// http://mixitup.io
+				$('#portfoliolist').mixitup({
+					targetSelector: '.portfolio',
+					filterSelector: '.filter',
+					effects: ['fade'],
+					easing: 'snap',
+					// call the hover effect
+					onMixEnd: filterList.hoverEffect()
+				});
+
+			},
+
+			hoverEffect: function () {
+
+				// Simple parallax effect
+				$('#portfoliolist .portfolio').hover(
+					function () {
+						$(this).find('.label').stop().animate({bottom: 0}, 200, 'easeOutQuad');
+						$(this).find('img').stop().animate({top: -30}, 500, 'easeOutQuad');
+					},
+					function () {
+						$(this).find('.label').stop().animate({bottom: -165}, 200, 'easeInQuad');
+						$(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');
+					}
+				);
+
+			}
+
+		};
+
+		// Run the show!
+		filterList.init();
+
+
+	});
+	</script>
+
+</head>
+<body>
+
+	<div class="menu">
+    <div class="container clearfix">
+      <div id="nav" class="grid_12 omega">
+        <ul class="navigation" id="filters">
+					<li><span class="filter" data-filter="web">Web</span></li>
+					<li><span class="filter" data-filter="graphics">Graphics</span></li>
+					<li><span class="filter" data-filter="textiles">Fashion</span></li>
+					<li id="logo"><a href="index.html"><img src="images/logo.png"></a></li>
+					<li><span class="filter" data-filter="photog">Print</span></li>
+					<li><span class="filter" data-filter="brand">Branding</span></li>
+					<li><span class="filter active" data-filter="graphics textiles photog brand web">All</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+<!-- <div id="panel">
+	<div class="slide" id="slide9" data-slide="9" data-stellar-background-ratio="0.5">
+	    <div class="container clearfix">
+	      <div id="content" class="grid_12">
+	        <h2>Festival Mini Site</h2>
+	      </div>
+	      <div class="grid_6 omega">
+	        <div class="slick image-border-400">
+	         <div class="slick-item">
+	              <img src="images/portfolios/web/8.jpg">
+	          </div>
+	        </div>
+	      </div>
+	      <div id="test" class="grid_6 omega">
+	        <p>In 2008 I won Societe Jersiaise Photographic Competition's "Architecture Award" and gained a commendation in the Natural History section, following on from an AS Level Photography evening course. This enabled me to begin work as a freelance photographer for Snapper and Gallery Magazine. In addition to private commissions, photography will always be one of my creative passions, and I enjoy combining it with other processes and incorporating it into my textile &amp; graphic design projects. </p>
+	      </div>
+	    </div>
+	  </div>
+  </div> -->
+
+
+
+	<div class="container-portfolio">
+
+		<div id="portfoliolist">
+<div class="portfolio image-border web graphics" data-cat="web">
+				<div class="portfolio-wrapper">
+					<img src="images/portfolios/13.jpeg" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Jurlique International</a>
+							<span class="text-category">Digital campaign design including e-newsletters, social media &amp; online collateral.</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio image-border web graphics" data-cat="web">
+				<div class="portfolio-wrapper">
+					<img src="images/portfolios/7.jpeg" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Specsavers</a>
+							<span class="text-category">As design lead for the Nordics I look after concept work including print, press, instore point of sale, out of home &amp; online collateral; as well as art directing trend and product photoshoots, and developing new brand guidelines.</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+    <div class="portfolio image-border web graphics photog" data-cat="web">
+        <div class="portfolio-wrapper">
+          <img src="images/portfolios/web/10.jpg" alt="" />
+          <div class="label">
+            <div class="label-text">
+              <a class="text-title">feelunique.com</a>
+              <span class="text-category">Front end coding &amp; design.</span>
+            </div>
+            <div class="label-bg"></div>
+          </div>
+        </div>
+      </div>
+
+     <div class="portfolio image-border brand photog web" data-cat="brand">
+        <div class="portfolio-wrapper">
+          <img src="images/portfolios/8.jpeg" alt="" />
+          <div class="label">
+            <div class="label-text">
+              <a class="text-title">Tahnee Lee Naturopathy</a>
+              <span class="text-category">Logo and stamp lockup design.</span>
+            </div>
+            <div class="label-bg"></div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="portfolio image-border graphics brand web" data-cat="graphics">
+        <div class="portfolio-wrapper">
+          <img src="images/portfolios/6.jpeg" alt="Kor Active Yoga Wear" />
+          <div class="label">
+            <div class="label-text">
+              <a class="text-title">Kor Active</a>
+              <span class="text-category">I conceptualised the brand identity, provided marketing support and provided final brand design for this up and coming Australian yoga wear company. </span>
+            </div>
+            <div class="label-bg"></div>
+          </div>
+        </div>
+      </div>
+
+			<div class="portfolio image-border web graphics" data-cat="web">
+				<div class="portfolio-wrapper">
+					<img src="images/portfolios/9.gif" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Laneez Surf Centre</a>
+							<span class="text-category">I provided summer marketing collateral including brochures, A-boards, signage &amp; vehicle decals, as well as web design for this small surf company.</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio image-border brand photog web" data-cat="brand">
+				<div class="portfolio-wrapper">
+					<img src="images/portfolios/brand/2.jpg" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title" href="http://www.vanillatherapy.co.uk" target="blank">Vanilla Therapy</a>
+							<span class="text-category">I was tasked with creating a brand for this mobile beauty therapist which conveyed a calming, holistic mood. Collateral included: logo, business cards, price lists, leaflets, gift vouchers &amp; a website.</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="portfolio brand photog web graphics image-border" data-cat="brand">
+				<div class="portfolio-wrapper">
+					<img src="images/portfolios/brand/3.jpg" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title" href="http://www.bamboo.je" target="blank">Bamboo Construction</a>
+							<span class="text-category">I provided a complete rebrand of logo, website, business cards, signage and brochures to make the company stand out from their competitors with a fresh, bold new approach.</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+      <div class="portfolio image-border graphics web" data-cat="web">
+        <div class="portfolio-wrapper">
+          <img src="images/portfolios/5.jpeg" alt="" />
+          <div class="label">
+            <div class="label-text">
+              <a class="text-title">All Together Now</a>
+              <span class="text-category">Graphics including redesign of website, &amp; logo, plus printed collateral for campaigns.</span>
+            </div>
+            <div class="label-bg"></div>
+          </div>
+        </div>
+      </div>
+
+			<div class="portfolio image-border web" data-cat="web">
+				<div class="portfolio-wrapper">
+					<img src="images/portfolios/web/9.jpg" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a href="http://www.markerringtonstudio.com" class="text-title">Mark Errington Studio</a>
+							<span class="text-category">Hand coded responsive portfolio site, featuring category filter and embedded jQuery video player.</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+
+
+      <div class="portfolio image-border graphics photog brand" data-cat="print">
+				<div class="portfolio-wrapper">
+					<img src="images/portfolios/2.gif" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Storm Island</a>
+							<span class="text-category">Branding for a creative startup.</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+
+      <div class="portfolio image-border textiles photog graphics" data-cat="textiles">
+        <div class="portfolio-wrapper">
+          <img src="images/portfolios/textiles/12.jpg" alt="" />
+          <div class="label">
+            <div class="label-text">
+              <a class="text-title">Element</a>
+              <span class="text-category">A collection of CAD fabrics designed for men &amp; women's surfwear, based on earth, air, fire &amp; water.</span>
+            </div>
+            <div class="label-bg"></div>
+          </div>
+        </div>
+      </div>
+
+
+    <div class="portfolio image-border web" data-cat="web">
+        <div class="portfolio-wrapper">
+          <img src="images/portfolios/web/11.jpg" alt="" />
+          <div class="label">
+            <div class="label-text">
+              <a class="text-title">Supp.me</a>
+              <span class="text-category">Collaborative Ruby on Rails project for Digital Jersey - a resturant supplies ordering app for which I was responisble for front end coding &amp; design.</span>
+            </div>
+            <div class="label-bg"></div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+			<div class="portfolio image-border textiles photog" data-cat="textiles">
+				<div class="portfolio-wrapper">
+					<img src="images/portfolios/textiles/13.jpg" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Journey of Discovery</a>
+							<span class="text-category">A collection of fabrics designed for the surf &amp; travel wear market, using unconventional fibres such as soya, bamboo, seaweed &amp; pineapple, microencapsulated with aloe &amp; eucalyptus extracts to give the wearer skin/ insect repellant/ UV benefits. </span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+
+
+			<div class="portfolio image-border graphics brand web" data-cat="graphics">
+				<div class="portfolio-wrapper">
+					<img src="images/portfolios/brand/4.jpg" alt="Caviar Bloodstock" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Caviar Bloodstock</a>
+							<span class="text-category">I provided complete company branding including logo, brochure &amp; web design for this new Australian company. </span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+
+
+			<div class="portfolio image-border graphics photog" data-cat="print">
+				<div class="portfolio-wrapper">
+					<img src="images/portfolios/graphics/1.jpg" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Holly &amp; Trevor</a>
+							<span class="text-category">Graphic &amp; design for printed wedding stationary, including hand illustrated meadow and large scale table plan made from reclaimed timbers, typography and illustration created using a unique wood burning technique.</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+
+
+      <div class="portfolio image-border brand" data-cat="brand">
+        <div class="portfolio-wrapper">
+          <img src="images/portfolios/web/12.jpg" alt="" />
+          <div class="label">
+            <div class="label-text">
+              <a class="text-title">Sans Pareil</a>
+              <span class="text-category">Company logo &amp; branding collateral for elite startup brand.</span>
+            </div>
+            <div class="label-bg"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio image-border graphics photog" data-cat="print">
+				<div class="portfolio-wrapper">
+					<img src="images/portfolios/4.gif" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Ell &amp; Luke</a>
+							<span class="text-category">Graphic design &amp; illustration for printed wedding stationary, and bespoke hand illustrated floral cake stand using a unique wood burning technique.</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+	<div class="portfolio image-border web" data-cat="web">
+        <div class="portfolio-wrapper">
+          <img src="images/portfolios/14.gif" alt="" />
+          <div class="label">
+            <div class="label-text">
+              <a class="text-title" href="http://www.stgeorgesprep.co.uk">St. Georges Prep</a>
+              <span class="text-category">Website re-design for a preparatory school.</span>
+            </div>
+            <div class="label-bg"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio image-border web" data-cat="web">
+        <div class="portfolio-wrapper">
+          <img src="images/portfolios/15.gif" alt="" />
+          <div class="label">
+            <div class="label-text">
+              <a class="text-title" href="http://www.cpinteriors.je/">CP Interiors</a>
+              <span class="text-category">Website re-design for an interior design company.</span>
+            </div>
+            <div class="label-bg"></div>
+          </div>
+        </div>
+      </div>
+
+		</div><!-- portfolio list -->
+
+	</div><!-- container -->
+
+	<div class="slide" id="slide11" data-slide="11" data-stellar-background-ratio="0.5">
+    <div class="container clearfix">
+      <div id="content" class="grid_12 omega">
+        <h2><a href="mailto:hello@sarapike.com">hello@sarapike.com</a>
+        </h2>
+        <div class="social-container">
+          <a href="http://www.pinterest.com/SPDigitalDesign/portfolio/" target="blank">
+              <img src="images/social-pin-h.gif" class="social">
+          </a>
+          <a href="https://twitter.com/SPDigitalDesign" target="blank">
+              <img src="images/social-twitter-h.gif" class="social">
+          </a>
+          <a href="https://www.linkedin.com/in/sarapike" target="blank">
+              <img src="images/social-linkedin-h.gif" class="social">
+          </a>
+          <a href="https://www.facebook.com/SlinkySass" target="blank">
+              <img src="images/social-fb-h.gif" class="social">
+          </a>
+          <a href="https://github.com/sara-pike" target="blank">
+              <img src="images/social-git-h.gif" class="social">
+          </a>
+        </div>
+        <p>&copy; Sara Pike 2015</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
